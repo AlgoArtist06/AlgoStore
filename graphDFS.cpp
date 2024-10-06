@@ -36,7 +36,6 @@ void dfs(int start,Graph graph,vector<bool> &ch){
     vector<int>neigh=graph.adjacencylist[start];
     for(int i=0;i<neigh.size();i++){
         if(ch[neigh[i]]==false){
-            ch[neigh[i]]=true;
             dfs(neigh[i],graph,ch);
         }
         else{
